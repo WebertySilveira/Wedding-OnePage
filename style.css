@@ -25,12 +25,29 @@ p{
 
 
 /*HERO SECTION*/
-#hero .hero{
+#hero{
     background-image: url(img/banner.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
+    z-index: 1;
     box-shadow: 5px 10px 10px gray;
+}
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .4;
+    z-index: -1;
+}
+
+#hero .hero h1{
+    color: white;
+    font-size: 5rem;
 }
 /*END HERO SECTION*/
 
@@ -106,3 +123,25 @@ p{
     transition: ease 3s scale;
 }
 /*GALLERY SECTION*/
+
+
+
+
+/*EVENT SECTION*/
+#event .event{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+#event .event-info{
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#event .event-info h1{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 500;
+}
+/*END EVENT SECTION*/
